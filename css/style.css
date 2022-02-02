@@ -1,0 +1,285 @@
+@import url(../font/stylesheet.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #1a6985;
+    /* --main: #7b5244; */
+    --font: #333333;
+    --bcolor: #f7f3ef85;
+    --btn:#0f3c4c;
+  }
+
+body {
+    font-family:'El Messiri' , sans-serif;
+  }
+  
+/* <<<<<<<<<<<<<<<<< items Share style>>>>>>>>> */
+.container {
+    width: 80%;
+  
+    margin: auto;
+  }
+  
+ul.ul-style i{
+  color: #1a6985;
+  font-size: 25px;
+  position: relative;
+}
+ul.ul-style i span{
+    /* color: #000; */
+    position: absolute;
+    bottom: 90%;
+    left: 55%;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #eee;
+    display: none;
+    padding: 2px 4px;
+    text-align: center;
+    line-height: 15px;
+
+}
+.cart-products{
+position: absolute;
+top: 100%;
+right: 0%;
+transform: translate(40% , 20%);
+background-color: #d3eaf2;
+border-radius: 2px;
+display: none;
+width: 200px;
+
+
+}
+
+
+
+
+a.btn-cart{
+    background-color: #1a6985;
+    border-radius: 5px;
+    border: none;
+    padding: 0 50px;
+    margin-left: 20px ;
+    color: #eee;    
+}
+
+.ul-style li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 2px;
+    padding-left: 2px;
+   
+    cursor: pointer;
+    position: relative;
+}
+.ul-style li a{
+    text-decoration: none;
+    /* top: 50%; */
+    /* padding: 1px; */
+    /* transform: translate(-50% , -50%); */
+    color: var(--font);
+    text-transform: capitalize;
+    font-size: 18px;
+  
+}
+
+/* <<<<<<<<<<<<<<<<<<<<< lange >>>>>>>>>>>>>>>>> */
+.header-lang{
+    width: 100%; 
+    background-color: var(--bcolor);
+}
+.lang-bar{
+    margin-left: 20px;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<< header >>>>>>>>>>>>>>>> */
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr  ;
+    width: 90%;
+    margin: 25px auto;
+    align-items: center;
+    /* justify-content: center; */
+   
+    
+}
+.logo {
+    cursor: pointer;
+    color: var(--main);
+    font-size: 30px;
+    line-height: 15px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+     
+}
+
+.cart-li i { 
+    margin-left: 30px;
+    
+}
+#userLogged{
+    display: none;
+}
+
+ul.dropdown-ul{
+    position: relative;
+    
+ 
+   
+}
+ul.dropdown-ul li{
+    list-style: none;
+    margin-left: 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    cursor: pointer;
+}
+
+ul.dropdown-ul i {
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+.link {
+    background-color: #d3eaf2;
+    text-decoration: none;
+    margin-top: 5px;  
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    transform: translate(-10%);
+    display: none;
+    border-radius: 8px;
+    display: none;
+    
+
+   
+}
+
+.link a{
+    display: inline-block;
+    padding: 0 5px;
+    line-height: 30px;
+    text-decoration: none;
+    color: var(--font);
+    cursor: pointer;
+   
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<< nav animi >>>>>>>>>>>>>>>> */
+
+ul.hover a:after{
+content: "";
+position: absolute;
+border-width: 0 2px; 
+border-style: solid;
+border-color: var(--main);
+width: 100%;
+height: 112%;
+left: 0px;
+transform: scale(1,0)
+}
+
+ul.hover a:hover::after{
+    transform: scale(1,1);
+    transition: transform .5s;
+}
+
+ul.hover a::before{
+    content: "";
+    position: absolute;
+    border-width: 2px 0;
+    border-color: var(--main);
+    border-style: solid;
+    width: 103%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    transform: scale3d(0,1,0);
+    transform-origin:left ;
+}
+
+ul.hover a:hover::before{
+    transform: scale3d(1,1,1);
+    transition: transform .7s;
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<< home section >>>>>>>>>>>>>>>> */
+
+.home{
+    margin-top: 120px;
+    background-image: url(../image/home/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    margin-top: 100px;
+    
+    
+}
+
+.content h3{
+    color: #000;
+    margin: 50px 0;
+    font-size: 30px;
+    
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.content button{
+    background-color: var(--btn);
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    text-transform: capitalize;
+    
+    /* font-size: 15px; */
+    font-weight: bolder;
+    transform: scale(1,1);
+    line-height: 40px;
+    color: #eee;
+}
+
+.content button:hover{
+    cursor: pointer;
+    opacity: .7;
+    transform: scale(1.1,1.1);
+    transition: .7s;
+
+}
+
+.overflay{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left:0 ;
+    right: 0;
+    bottom: 0;
+   opacity: .7;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <title>Products</title>
+</head>
+<body>
+ 
+    <div class="header-lang">
+        <ul class="ul-style lang-bar" >
+            <li>AR</li>
+            <li>EN</li>
+            </ul>
+    </div>
+
+
+    <header class="heder">
+        <div class="logo">
+            <h3  onclick="homePath()" class="brand">JSEcommerce</h3>
+            </div>
+            <nav>
+            <ul class="ul-style hover">
+            
+            <li><a href="./templates/products.html">Products</a></li>
+            <li><a href="">favorite</a></li>
+            <li><a href="">my Item</a></li>
+            </ul>
+            
+            <ul class="ul-style cart-icon">
+            <li class="cart-li"><i id="cart-nav" class="fa fa-shopping-cart" ><span class="count-badge"></span></i>
+            <div class = "cart-products">
+            <div class="title-qu"></div>
+            <a class="btn-cart" href="">veiw all</a>
+            </div>
+            </li>
+            </ul>
+            
+            <ul class="dropdown-ul" id="userUnlogged" >
+                <li onclick="hover()">login</li> <i onclick="hover()" class="fas fa-angle-down fa-large "></i>
+                <div class="link">
+                <a href="../templates/login.html">login</a>
+                <a href="../templates/register.html">register</a>
+                </div>
+            </ul>
+            
+            <ul class="dropdown-ul" id="userLogged" >
+                <li onclick="hover()">${user}</li> <i onclick="hover()" class="fas fa-angle-down fa-large "></i>
+                <div class="link">
+                <a href="">${user}</a>
+                <a onclick='logOut()'>logout</a>
+                </div>
+            </ul>
+            </nav>
+    </header>
+    
+    <section>
+        <div class="container">
+            <div class="filter">
+                <input type="search" placeholder="Search">
+                <select name="select" id="">
+                    <option hidden value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            
+            <div class="products">
+             
+                <!-- <div class="item">
+                    <div class="overflay-item"></div>
+                    <div class="item-img">
+                    <img src="${item.imgUrl}">
+                    <a href="#"></a>
+                    </div>
+                    <div class="item-content">
+                    <h1>  ${item.title}</h1>
+                    <p><b> color : </b>${item.color}</p>
+                    <p><b>memory : </b>${item.memory}</p>
+                    <p><b>address : </b>${item.address} </p>
+                    </div>
+                    <div class="item-action">
+                    <i id="add-cart"  class="fa fa-cart-plus"></i>
+                    <i id="favorite"  class="far fa-heart" ></i>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/header.js" ></script>  
+    <script src="../js/products.js" ></script>  
+    <script src="../js/ProductData.js" ></script>  
+    <script src="../js/user.js" ></script>  
+    <!-- <script src="../js/cart.js" ></script> -->
+
+</body>
+</html>
