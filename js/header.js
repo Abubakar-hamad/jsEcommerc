@@ -22,9 +22,9 @@ header.innerHTML =`<div class="logo">
 <nav>
 <ul class="ul-style hover">
 
-<li><a href="../templates/products.html">Products</a></li>
-<li><a href="../templates/favorite.html">favorite</a></li>
-<li><a href="../templates/my-item.html">my Items</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="favorite.html">favorite</a></li>
+<li><a href="my-item.html">my Items</a></li>
 </ul>
 
 <ul class="ul-style cart-icon">
@@ -39,8 +39,8 @@ header.innerHTML =`<div class="logo">
 <ul class="dropdown-ul" id="userUnlogged" >
     <li onclick="hover()">login</li> <i onclick="hover()" class="fas fa-angle-down fa-large "></i>
     <div class="link">
-    <a href="../templates/login.html">login</a>
-    <a href="../templates/register.html">register</a>
+    <a href="login.html">login</a>
+    <a href="register.html">register</a>
     </div>
 </ul>
 
@@ -55,7 +55,7 @@ header.innerHTML =`<div class="logo">
 
 
 function homePath() {
-    window.location="../index.html"
+    window.location="index.html"
 }
 
 function hover(){
@@ -76,7 +76,7 @@ function logOut() {
     // let links = document.querySelectorAll(".link a")
     localStorage.clear();
     setTimeout(() => {
-        window.location= "../templates/register.html"
+        window.location= "register.html"
     }, 500)
     console.log("logout");
 }
@@ -98,6 +98,6 @@ if (cartArr.length != '') {
     
 function cartPage() {
     setTimeout(() => {
-         window.location="../templates/cart.html"
+         window.location="cart.html"
      },500)
  }
