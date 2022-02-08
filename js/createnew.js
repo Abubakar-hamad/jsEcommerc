@@ -32,7 +32,7 @@ function publishItem(e) {
             quantity: 1,
             title: itemtitle, 
             color: itemcolor,
-            imgUrl: "../image/product/no_image.png", 
+            imgUrl: "./image/product/no_image.png", 
             memory: itemsize,
             price: itemprice,
             isMe :"Y"
