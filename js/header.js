@@ -23,8 +23,8 @@ header.innerHTML =`<div class="logo">
 <ul class="ul-style hover">
 
 <li><a href="products.html">Products</a></li>
-<li><a href="">favorite</a></li>
-<li><a href="">my Item</a></li>
+<li><a href="favorite.html">favorite</a></li>
+<li><a href="my-item.html">my Items</a></li>
 </ul>
 
 <ul class="ul-style cart-icon">
@@ -83,15 +83,14 @@ function logOut() {
 
 
  console.log(cartArr);
- cartArr.map((item) =>{
-    let cartMenuDom = document.querySelector(".title-qu");
-    cartMenuDom.innerHTML += `<p>${item.title} || ${item.quantity}</p>` 
-        let cartLength = document.querySelectorAll(".title-qu p")
-        let counterBadge = document.querySelector(".count-badge");
-        counterBadge.style.display= "block"
-     counterBadge.innerHTML = cartLength.length;
+ 
+if (cartArr.length != '') {
+    let counterBadge = document.querySelector(".count-badge");
+    counterBadge.style.display= "block"
+    counterBadge.innerHTML = cartArr.length;
+        }
      
-    })
+  
 
 
 

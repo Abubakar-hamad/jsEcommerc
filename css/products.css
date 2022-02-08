@@ -9,8 +9,26 @@
 
   }
 
-.filter{
+.filtering{
     margin: 100px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 100px ;
+}
+
+.filtering input{
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid var(--main);
+    font-size: 20px;
+    color: var(--font);
+}
+.filtering select{
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid var(--main);
+    font-size: 15px;
+    color: var(--font);
 }
 .products{
     width: 60%;
@@ -28,7 +46,7 @@
     position: relative;
     margin: 50px 0;
     background-color: var(--bcolor);
-
+    
 }
 .item:hover{
 
@@ -95,7 +113,7 @@
     color: var(--main);
 }
 
-.item-action i#add-cart{
+.item-action i#add-cart , .item-action i#edititem {
     border-radius: 5px;
     color: var(--btn);
     font-size: 30px;
@@ -103,23 +121,78 @@
     top: 5px;
     right: 20px;
     cursor: pointer;
+    display: none;
     
 }
-.item-action i#favorite{
-    color: var(--btn);
+.item-action i#favorite , i#deletitem{
+    color: red;
     position: absolute;
     right: 20px;
     bottom: 5px;
     font-size: 30px;
     cursor: pointer;
+    display: none;
 }
 .item-action i#add-cart:hover ,
-.item-action i#favorite:hover{
+.item-action i#favorite:hover,
+.item-action i#edititem:hover,
+.item-action i#deletitem:hover{
    transform: scale(1.2);
    transition: transform .5s;
 }
 
+.product-section{
+    position: relative;
+}
+#createItem{
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    font-size: 70px;
+    color: var(--main);
+    /* color: #333333; */
+    
+}
+
+#createItem:hover{
+    cursor: pointer;
+    transform: scale(2,2);
+    opacity: .5;
+    color: #333333;
+    transition: transform .5s;
+}
+/* >>>>>>>>>>>> product-details */
+
+.item-details{
+    padding: 20px;
+  
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 300px; */
+    background-color: var(--bcolor);
+    border-radius: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+.item-details-img{
+width: 60%;
+height: 500px;
 
 
+}
 
+.item-details-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.item-details-content{
+    width: 30%;
+   
+}
 
