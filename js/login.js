@@ -24,7 +24,7 @@ function loginUser(e) {
             alert("username or password wrong !!")
         } else {
             setTimeout(() => {
-                window.location = "index.html"
+                window.location = "../index.html"
             },500)
         }
     }
